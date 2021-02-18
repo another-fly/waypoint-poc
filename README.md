@@ -17,3 +17,7 @@ It has an [API SDK](https://github.com/hashicorp/waypoint-plugin-sdk) for develo
 - CLI features
 - SDK features
 
+## Notes
+
+- Waypoint cli uses HCL files to manage deployment
+
