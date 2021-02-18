@@ -23,10 +23,10 @@ func main() {
 
 	r := http.NewServeMux()
 	r.Handle("/hello", handler)
-	
+
 	server := &http.Server{
-		Addr:              ":8080",
-		Handler:           r,
+		Addr:    ":3000",
+		Handler: r,
 	}
 
 	go func(handler http.HandlerFunc) {
@@ -34,10 +34,10 @@ func main() {
 	}(handler)
 
 	go func() {
-		<- cs
+		<-cs
 		defer cancel()
 	}()
 
-	<- ctx.Done()
+	<-ctx.Done()
 	log.Fatal(server.Shutdown(context.TODO()))
 }
