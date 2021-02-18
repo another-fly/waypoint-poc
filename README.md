@@ -20,4 +20,7 @@ It has an [API SDK](https://github.com/hashicorp/waypoint-plugin-sdk) for develo
 ## Notes
 
 - Waypoint cli uses HCL files to manage deployment
+- Waypoint project should be created inside the project where the project/dockerfile is
+  - The path can be specified, but not the port. It's always the 3000 tcp port
+- Executing `waypoint init` will create an example `hcl` file. Set up the file and execute again `waypoint init` to create the project folders
 
